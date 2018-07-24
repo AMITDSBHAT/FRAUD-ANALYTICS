@@ -1,0 +1,8 @@
+method 1)oversampling only the minority class will lead to overfitting.
+
+method 2)instead of this, if we oversample both minority and majority class,
+the rate at which the majority class is increasing will be less compared to first method, so low overfitting.
+
+but if the majority class is too much then we can increase minority class to a reasonable proportion, like(60-40)
+
+50-50 is not recomended as we tend to give eqaul importance to both classes where fruad or minority class should be kept low proportion only.

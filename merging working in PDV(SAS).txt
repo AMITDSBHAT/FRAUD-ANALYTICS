@@ -1,0 +1,8 @@
+https://vle.sas.com/pluginfile.php/30241/mod_scorm/content/13/bc_ewinjr.htm
+
+LEARNING: 
+initially PDV will be set to missing values,later PDV wont be set to missing values until it finds a new bigroup value match 
+and everytime it will retain the old values of the iteration
+(if ids are not matching in the iteration, both ids will be compared with the id in PDV which is retained)
+(if ids match in the iteration, PDV will be set to missing only if its a new bigroup value match)
+(retaining is only in merging, not while reading the dataset, but why ?) 
