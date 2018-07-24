@@ -3,7 +3,7 @@ WHEN TO USE TEST OF SIGNIFICANCE:
 when there is dynamicity(mostly using samples(as the sample keeps changing)) in the test statistic we proceed to check the significance of that test statisitc.
 so to gain the confidence even when there is dynamicity in the data.
 
-NOTE: Every statistic/estimate follows some sampling distribution.
+NOTE: Every statistic/estimate follows some sampling distribution irrespective of whether its a point estimation,interval estimation OR Hypothesis testing.
 
 ex : 
 1) checking the significance of correlation.
