@@ -1,0 +1,16 @@
+REGRESSION TREES:
+consider 
+TARGET: continuous variable 
+PREDICTORS : all continuous variables
+
+STEP1 : choosing the best variable for splitting
+algorithm runs through first variable, iterates through all the values to choose the best value to split to get most homogeneous split.
+This splitting value is stored somewhere.
+Algorithm now goes through all the variable, iterates through all the values and chooses the best value for spliiting and stores it.
+Algorithm now compares all these stored splits and chooses the best variable.
+Using that split mean(y) will be calculated for that region.
+
+STEP2:algorithm chooses the next best variable to split and same procedure continues.
+
+NOTE: REGRESSION TREES ONLY CALCULATE THE MEAN OF Y BUT NOT THE REGRESSION LINE, 
+PAIRWISE REGRESSION CREATES REGRESSION LINES AT DEFINED REGIONS OR PARTITIONS OF X VALUES.

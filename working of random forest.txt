@@ -1,0 +1,41 @@
+Concept of bagging:
+ensemble method(grouping)to reduce variance(caused by seperate trees)
+in bagging(aggregating the bootstrapped samples(sampling with replacement)) all the variances(of each tree) is averaged hence resultant variance is reduced.
+
+DIFFERENCE BETWEEN BAGGING AND RANDOM FOREST:
+Bagging will consider only bootstrap sampling and uses all the variables in each bags and variance is reduced by taking the average of variances in each bag.
+Random forest is bagging + column sampling(does not use all the columns).
+
+How random forest performs better than bagging:
+As bagging consideres all the variable, every time only the most imporatant variables are used for splitting and hence variance in each tree will be almost similar and hence the average is not decreased to expected.
+But random forest considers column sampling, different variables are given imporatance in each bag and hence variance will differ from bag to bag to a significant extent and hence the average variance is decreased by a considerable amount and better than bagging.
+
+WORKING:
+if training set has 1000 records, 
+choosing no of columns(say 6) and rows(say 600)(selected at random with replacement-bootstrapped) to be used to build a decision tree.
+choosing the no of trees
+so in all the trees any 6 columns and 600 rows will be selected  at random and tree is built.
+the result of each trees is averaged or voted to get the final result.
+
+Random forest is pron to overfitting only if the no of trees is very very high and also depends on depth of each tree.
+
+Random forest(bagging) algorithm uses simple random sampling as records are picked from a uniform distribution where the probability of being picked is same for all observation.
+whereas boosting uses probablistic sampling where misclassified records have gets more probability of getting picked as they are provided more weights.
+
+RANDOM FOREST for SELECTING IMPOTANT VARIABLES:
+Based on the no of times importance given to the variables used for splitting they are rated in each tree(based on importance) and resultant importance is calculated.
+ex : if v1 is used as the most important variable in most of the trees, overall v1 is given highest importance.
+note that v1 might not be used as the most important variable in all the trees,the importance is given by the votes at that perticular splitting.
+if v2 is used as the second most impotance in most trees, its given second most importance overall.
+being a non-parametric algorithm(analysed in space without functional approximation)it does not takes care of boundaries 
+and also a variable is not affected in presence of another variable as partitions are made irrespective of variable dependencies
+so variable selecting can be done to an extent but the efficiency depends on where we are going to use those variables(whether in parametric or non-parametric).
+mostly these variables are not used for non-parametric as again the function approximation is not made and regions are created without considering the effects of other variable with that variable.
+ANOTHER EXPLANATION:
+RSS value or gini index is calculated in every splits for the variables used for splitting and then by taking the average of RSS value in all the bags, based on which has more average reduction in variance or gini index, that variable is considered as imporant variable.
+
+
+RANDOM FOR MISSING VALUE IMPUTAION AND CLUSTER SAMPLING:
+missforest is the package in R which uses random  forest to impute the missing values based on proximity measure(obs ending up in the same node have maximum proximity measure)
+using proximity measure, distance can be calculated(1-proximity = distance) and hence the cluster sampling can be done(which obs to be clubbed together)
+ 

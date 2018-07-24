@@ -1,0 +1,6 @@
+Feature selection : making a subset selection of features(forward/backward/stepwise regression)
+
+Feature extraction : Extracting some features out of given features(creating a new variable from existing variable)
+
+Dimensionality reduction : Reducing the no of features/dimensions using some techniques like PCA/FA/LDA
+where the original features are lost and new features have come into picture where no of new feature < no of old featues.

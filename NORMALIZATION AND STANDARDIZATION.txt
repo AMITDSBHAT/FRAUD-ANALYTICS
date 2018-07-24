@@ -1,0 +1,29 @@
+In unsupervised techniques where similarity/dissimilarity(distance measure) is used as a fundamental idea for the algorithms.
+If the features are in different scales, the values/variance in that feature might mislead the algorithm which might result in incorrect results.
+Exs:
+1.We have a set of variables where scales are different for all variables,
+If a feature has more variance in it, during PCA it might mislead the direction(eigen vector and eigen values) and,
+we might end up in selecting a wrong set of components. 
+Reference:https://www.quora.com/Why-is-it-beneficial-to-center-and-normalize-the-data-before-running-Principal-Component-Analysis-on-it
+
+2.might result in wrong clusters as the variance is misleading the grouping algorithm
+reference:https://www.quora.com/When-is-it-not-a-good-idea-to-normalize-your-data-before-analysis
+
+SCALING can be done using two methods :
+
+STANDARDIZATION:
+1.is necessary when distance is considered into account.
+2.brings down all the variable to have same property of guassian distribution(mean=0,sd=1).
+3.outliers are not missed and they are taken care as we convert to zero mean and sd are considered both sides.
+4.not used for comparing
+5.to rank the importance of variables in regression.
+
+NORMALIZATION:
+1. mainly used for comparision.
+2. ex: correlation which ranges from -1 to 1.
+3. outliers will be missed as the values are scaled down to very low values(generally).
+
+
+BONUS : SIMILARITY MEASURES
+http://dataaspirant.com/2015/04/11/five-most-popular-similarity-measures-implementation-in-python/
+Q : when to use which similarity measures?(with explanation)

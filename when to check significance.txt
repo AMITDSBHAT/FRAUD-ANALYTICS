@@ -1,0 +1,36 @@
+WHEN TO USE TEST OF SIGNIFICANCE:
+
+when there is dynamicity(mostly using samples(as the sample keeps changing)) in the test statistic we proceed to check the significance of that test statisitc.
+so to gain the confidence even when there is dynamicity in the data.
+
+ex : 
+1) checking the significance of correlation.
+2) checking the significance of R squared value.
+3) checking the significance of beta coeffients.
+4) checking the significance of VIF values
+
+But before checking the significance, think whether it has any objective
+(ex : should the VIF values should be tested for significance?)
+
+STEPS FOR TESTING SIGNIFICANCE:
+1) SETTING THE OBJECTIVE/HYPOTHESIS
+ex : 
+1)H0-correlation b/w DV and IV is zero, H1-correlation  b/w DV and IV is not zero.
+2)is R squared1 is different from another.(chow-test while structural break occurs)
+
+2)finding the sampling distribution for the measure(R2 or VIF or r) in hand.(challenging task)
+
+3)finding the test statistic.
+
+4)finding the P value.
+
+5)Taking Decision.
+
+
+BONUS:
+CHECKING THE SIGNIFICANCE OF CORRELATION BETWEEN DV and IV
+
+formula - t = R*SQRT((n-2)/(1-Rsq))
+
+OBJECTIVE/HYPOTHESIS : H0-correlation between DV and IV is zero,H1-correlation between DV and IV is non zero.
+SAMPLING DISTRIBUTION : T- distribution.

@@ -1,0 +1,13 @@
+As the features or dimension increases, the amount of data for accuracy grows exponentially.
+
+Reason:As the dimension grows, for only distance based algorithms(even though scaling is used) the data points become so spare in space that more data(points in space) is required for more accuracy. 
+
+So when the dimension increases,k-NN or any distance based algorithm gives less error to an extent, 
+later on with increase in dimensions(after the threshold dimension) error is increased due to too much bias(as the available spare points are more distant the average will be biased and less accurate)
+and if the model tries to fit the data more accurately with less bias the variance will be too high too and hence high MSE in both cases.
+so it leads to overfitting easily.
+
+
+concept of Scaling:
+normalization - shrinks the values within a range(ex within 0 to 1)
+standardization - shrinks the values with mean as 0 and sd as 1 but not within a range.(keeps the original structure with shrinkage)

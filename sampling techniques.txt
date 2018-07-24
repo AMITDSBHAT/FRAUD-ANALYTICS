@@ -1,0 +1,40 @@
+Simple Random Sampling 
+Stratified sampling
+cluster sampling
+progressive sampling
+
+For unbalanced dataset:
+Random undersampling
+Random Oversampling
+Synthetic Minority Oversampling(SMOTE), transforms the data while generating syntetic observations
+ROSE: does not transform the data while generating sampling techniques.
+
+Model generalizing sampling techniques:
+Concept of train error and test error(estimate of true error for that model)
+Validation approach:
+Divide the sample into equal halves(train on first half and test on second half)
+Drawbacks:
+1.Estimate of testerror is highly variable based on which observations are included in train and test set.
+2.Weak model(not trained well) as less data used for training.
+3.As the data in train set is less, we will get error more than expected(if we would have trained using more data)which is OVERESTIMATION OF ERROR.
+
+K-fold Cross-Validation:
+challenge: choosing the K value
+if we choose low value for K(say 2)the model will be see or trained for less data, so bias will be higher and low variance(b/w the models)compared to situation where K is more.
+if we choose high value of K(say 20)we will be training the model for(K-1)parts, so chances of overfitting is more as the model will see almost all data present, so low bias and high varaince. 
+So best value of K is 5(80% of training set)-10(90% of training set)
+To know the true picture of error using this data, the MSEs in each step is averaged.
+To know the true error, model is tested on a very big sample of test set.
+
+Wrong and Right way:
+Example: lets say we have 5000 variables and we filter out best 100 variables according the correlation with target variable.
+debate : we are choosing 100 variables based on correlation, so this also acts as a part of training the model.
+WRONG METHOD : applying cross-validation on filtered data.
+RIGHT METHOD : choose K, divide the data, any tests on first K-1 sets and then on remaining set and filtering the variables later if needed. 
+
+BOOTSTRAP SAMPLING:
+meaning : sampling with replacement
+bootstrap sample is training and original as validation set and sample size is same as original sample size unlike k fold CV method.
+advantage :better method to find the standard error of the test error estimate.
+disadvantage : as the overlapping occurs unlike cross-validation, there wont be any unseen data in the test set.
+
